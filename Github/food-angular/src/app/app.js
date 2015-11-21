@@ -6,18 +6,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
     }
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var angular2_1 = require('angular2/angular2');
 var AppComponent = (function () {
     function AppComponent() {
+        this.title = 'Tour of Heroes';
+        this.hero = 'Windstorm';
     }
     AppComponent = __decorate([
         angular2_1.Component({
             selector: 'food-menu',
             template: '<div class="container">' +
-                '<h1>Try out our delicious meals!</h1>' +
-                '<h2>Angular2</h2>' +
+                '<h1>{{title}}</h1> <h2>{{hero}} details!</h2>' +
                 '</div>'
-        })
+        }), 
+        __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 })();
