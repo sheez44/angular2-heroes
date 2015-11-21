@@ -13,18 +13,25 @@ var angular2_1 = require('angular2/angular2');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
-        this.hero = 'Windstorm';
+        this.hero = {
+            id: 1,
+            name: 'Paladin Danse'
+        };
     }
     AppComponent = __decorate([
         angular2_1.Component({
             selector: 'food-menu',
-            template: '<div class="container">' +
-                '<h1>{{title}}</h1> <h2>{{hero}} details!</h2>' +
-                '</div>'
+            template: "\n    <div class=\"container\">\n        <h1>{{title}} <span class=\"label label-default\">!!!</span></h1>\n        <h2>{{hero.name}} details!</h2>\n        <div><label>id:</label>{{hero.id}}</div>\n        <label for=\"name-editor\">name:</label>\n        <div class=\"input-group\">\n            <div><input id=\"name-editor\" type=\"text\" class=\"form-control\" [(ng-model)]=\"hero.name\" placeholder=\"name\"></div>\n        </div>\n    </div>\n    ",
+            directives: [angular2_1.FORM_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
+})();
+var Hero = (function () {
+    function Hero() {
+    }
+    return Hero;
 })();
 angular2_1.bootstrap(AppComponent);
 //# sourceMappingURL=app.js.map
